@@ -5,7 +5,10 @@
 	<groupId>SampleSelenium</groupId>
 	<artifactId>SampleSelenium</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<build>
+	<profiles>
+		<profile>
+			<id>RT</id>
+			<build>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -13,13 +16,33 @@
 						<version>3.0.0-M5</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>testng.xml</suiteXmlFile>
+								<suiteXmlFile>reg_suite.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
 				</plugins>
 			</build>
-	
+		</profile>
+
+		<profile>
+			<id>ST</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.0.0-M5</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>smoke_suite.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
 	<dependencies>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
