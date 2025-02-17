@@ -7,6 +7,7 @@ public class SecondTest {
 	public void thirdtTest() {
 		System.out.println("package2Test1");
 	}
+	@Test
 	public void fourthTest() {
 		System.out.println("package2Test2");
 	}
