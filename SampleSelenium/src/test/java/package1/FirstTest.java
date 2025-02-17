@@ -5,11 +5,11 @@ import org.testng.annotations.Test;
 public class FirstTest {
 	@Test
 	public void firstTest() {
-		System.out.println("package1firstTest");
+		System.out.println("package1Test1");
 	}
 	@Test
 	public void secondTest() {
-		System.out.println("package1secondTest");
+		System.out.println("package1Test2");
 	}
 	
 
